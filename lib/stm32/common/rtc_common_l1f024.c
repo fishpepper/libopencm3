@@ -120,4 +120,14 @@ void rtc_clear_wakeup_flag(void)
 	RTC_ISR &= ~RTC_ISR_WUTF;
 }
 
+/*---------------------------------------------------------------------------*/
+/** @brief Clears the Alarm A flag
+
+@details RTC_ISR[13:8] bits are not write protected: no need to unlock
+*/
+void rtc_clear_alarm_flag(void)
+{
+	RTC_ISR &= ~RTC_ISR_ALRAF;
+}
+
 /**@}*/

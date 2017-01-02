@@ -333,6 +333,7 @@ void rtc_lock(void);
 void rtc_unlock(void);
 void rtc_set_wakeup_time(uint16_t wkup_time, uint8_t rtc_cr_wucksel);
 void rtc_clear_wakeup_flag(void);
+void rtc_clear_alarm_flag(void);
 
 END_DECLS
 /**@}*/
