@@ -438,6 +438,8 @@ struct scb_exception_stack_frame {
 	} while (0)
 
 void scb_reset_system(void) __attribute__((noreturn, naked));
+void scb_enable_deep_sleep_mode(void);
+void scb_disable_deep_sleep_mode(void);
 
 /* Those defined only on ARMv7 and above */
 #if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)
