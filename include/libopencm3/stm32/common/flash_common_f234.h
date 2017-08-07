@@ -60,6 +60,8 @@
 #define FLASH_ACR_LATENCY_7WS		0x07
 
 /* --- FLASH_SR values ----------------------------------------------------- */
+#define FLASH_SR_PGERR                       (1 << 2)
+
 
 /* --- FLASH_CR values ----------------------------------------------------- */
 

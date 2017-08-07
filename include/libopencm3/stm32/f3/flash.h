@@ -68,6 +68,23 @@
 #define FLASH_CR_PER			(1 << 1)
 #define FLASH_CR_PG			(1 << 0)
 /**@}*/
+BEGIN_DECLS
+
+void flash_prefetch_buffer_enable(void);
+void flash_prefetch_buffer_disable(void);
+void flash_clear_pgerr_flag(void);
+void flash_clear_wrprterr_flag(void);
+uint32_t flash_get_status_flags(void);
+void flash_program_word(uint32_t address, uint32_t data);
+void flash_program_half_word(uint32_t address, uint16_t data);
+void flash_erase_page(uint32_t page_address);
+void flash_erase_all_pages(void);
+void flash_unlock_option_bytes(void);
+void flash_erase_option_bytes(void);
+void flash_program_option_bytes(uint32_t address, uint16_t data);
+
+END_DECLS
+
 
 #endif
 
